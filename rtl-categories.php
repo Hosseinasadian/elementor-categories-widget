@@ -12,26 +12,29 @@
  * @package         Rtl_Categories
  */
 
-function elementor_test_widgets_dependencies() {
+function elementor_test_widgets_dependencies()
+{
 
-	wp_register_script( 'rtl-categories-script-handle', plugins_url( 'assets/js/rtl_categories.js', __FILE__ ),array('jquery') );
+	wp_register_script('rtl-categories-script-handle', plugins_url('assets/js/rtl_categories.js', __FILE__), array('jquery'));
 
-	wp_register_style( 'rtl-categories-style-handle', plugins_url( 'assets/css/rtl_categories.css', __FILE__ ) );
+	wp_register_style('rtl-categories-style-handle', plugins_url('assets/css/rtl_categories.css', __FILE__));
 
-	wp_localize_script( 'rtl-categories-script-handle', 'rtl_translations',
+	wp_localize_script('rtl-categories-script-handle', 'rtl_translations',
 		array(
-			'show_more_categories' => __('Show More Categories','rtl-categories'),
-			'show_less_categories' => __('Show Less Categories','rtl-categories'),
+			'show_more_categories' => __('Show More Categories', 'rtl-categories'),
+			'show_less_categories' => __('Show Less Categories', 'rtl-categories'),
 		)
 	);
 }
-add_action( 'wp_enqueue_scripts', 'elementor_test_widgets_dependencies' );
 
-function load_rtl_categorie_textdomain() {
-	$loaded = load_plugin_textdomain( 'rtl-categories', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-var_dump($loaded);
+add_action('wp_enqueue_scripts', 'elementor_test_widgets_dependencies');
+
+function load_rtl_categorie_textdomain()
+{
+	load_plugin_textdomain('rtl-categories', false, dirname(plugin_basename(__FILE__)) . '/languages');
 }
-add_action( 'plugins_loaded', 'load_rtl_categorie_textdomain' );
+
+add_action('plugins_loaded', 'load_rtl_categorie_textdomain');
 
 if (!function_exists('is_plugin_active')) {
 	include_once(ABSPATH . 'wp-admin/includes/plugin.php');
