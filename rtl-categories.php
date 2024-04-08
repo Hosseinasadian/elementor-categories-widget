@@ -28,7 +28,8 @@ function elementor_test_widgets_dependencies() {
 add_action( 'wp_enqueue_scripts', 'elementor_test_widgets_dependencies' );
 
 function load_rtl_categorie_textdomain() {
-	load_plugin_textdomain( 'rtl-categories', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	$loaded = load_plugin_textdomain( 'rtl-categories', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+var_dump($loaded);
 }
 add_action( 'plugins_loaded', 'load_rtl_categorie_textdomain' );
 
