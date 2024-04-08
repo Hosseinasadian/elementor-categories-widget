@@ -10,7 +10,7 @@ class RTL_Categories extends \Elementor\Widget_Base
 
 	public function get_title()
 	{
-		return esc_html__('Rtl woocommerce categories', 'textdomain');
+		return esc_html__('Rtl woocommerce categories', 'rtl-categories');
 	}
 
 	public function get_icon()
@@ -49,7 +49,7 @@ class RTL_Categories extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => esc_html__('Settings', 'textdomain'),
+				'label' => esc_html__('Settings', 'rtl-categories'),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -58,7 +58,7 @@ class RTL_Categories extends \Elementor\Widget_Base
 			'count',
 			[
 				'type' => \Elementor\Controls_Manager::NUMBER,
-				'label' => esc_html__('Categories Count', 'textdomain'),
+				'label' => esc_html__('Categories Count', 'rtl-categories'),
 				'min' => 0,
 				'max' => 18,
 				'step' => 1,
@@ -69,10 +69,10 @@ class RTL_Categories extends \Elementor\Widget_Base
 		$this->add_control(
 			'first_closed',
 			[
-				'label' => esc_html__('Close Mode First Time', 'textdomain'),
+				'label' => esc_html__('Close Mode First Time', 'rtl-categories'),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__('Yes', 'textdomain'),
-				'label_off' => esc_html__('No', 'textdomain'),
+				'label_on' => esc_html__('Yes', 'rtl-categories'),
+				'label_off' => esc_html__('No', 'rtl-categories'),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -83,7 +83,7 @@ class RTL_Categories extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'section_style',
 			[
-				'label' => esc_html__('Style', 'textdomain'),
+				'label' => esc_html__('Style', 'rtl-categories'),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -91,7 +91,7 @@ class RTL_Categories extends \Elementor\Widget_Base
 		$this->add_control(
 			'close_size',
 			[
-				'label' => esc_html__('Max Height In Close Mode', 'textdomain'),
+				'label' => esc_html__('Max Height In Close Mode', 'rtl-categories'),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'default' => '125',
 				'selectors' => [
@@ -103,7 +103,7 @@ class RTL_Categories extends \Elementor\Widget_Base
 		$this->add_control(
 			'open_size',
 			[
-				'label' => esc_html__('Max Height In Open Mode', 'textdomain'),
+				'label' => esc_html__('Max Height In Open Mode', 'rtl-categories'),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'default' => '400',
 				'selectors' => [

@@ -3,7 +3,7 @@
  * Plugin Name:     Rtl Categories
  * Plugin URI:      PLUGIN SITE HERE
  * Description:     PLUGIN DESCRIPTION HERE
- * Author:          YOUR NAME HERE
+ * Author:          Hossein Asadian
  * Author URI:      YOUR SITE HERE
  * Text Domain:     rtl-categories
  * Domain Path:     /languages
@@ -12,9 +12,30 @@
  * @package         Rtl_Categories
  */
 
+function elementor_test_widgets_dependencies() {
+
+	wp_register_script( 'rtl-categories-script-handle', plugins_url( 'assets/js/rtl_categories.js', __FILE__ ),array('jquery') );
+
+	wp_register_style( 'rtl-categories-style-handle', plugins_url( 'assets/css/rtl_categories.css', __FILE__ ) );
+
+	wp_localize_script( 'rtl-categories-script-handle', 'rtl_translations',
+		array(
+			'show_more_categories' => __('Show More Categories','rtl-categories'),
+			'show_less_categories' => __('Show Less Categories','rtl-categories'),
+		)
+	);
+}
+add_action( 'wp_enqueue_scripts', 'elementor_test_widgets_dependencies' );
+
+function load_rtl_categorie_textdomain() {
+	load_plugin_textdomain( 'rtl-categories', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'plugins_loaded', 'load_rtl_categorie_textdomain' );
+
 if (!function_exists('is_plugin_active')) {
 	include_once(ABSPATH . 'wp-admin/includes/plugin.php');
 }
+
 
 if (is_plugin_active('elementor/elementor.php')) {
 	function register_rtl_categories($widgets_manager): void
@@ -24,26 +45,6 @@ if (is_plugin_active('elementor/elementor.php')) {
 	}
 
 	add_action('elementor/widgets/register', 'register_rtl_categories');
-
-	function elementor_test_widgets_dependencies() {
-
-		wp_register_script( 'rtl-categories-script-handle', plugins_url( 'assets/js/rtl_categories.js', __FILE__ ),array('jquery') );
-
-		wp_register_style( 'rtl-categories-style-handle', plugins_url( 'assets/css/rtl_categories.css', __FILE__ ) );
-
-		wp_localize_script( 'rtl-categories-script-handle', 'rtl_translations',
-			array(
-				'show_more_categories' => __('Show More Categories','rtl-categories'),
-				'show_less_categories' => __('Show Less Categories','rtl-categories'),
-			)
-		);
-	}
-	add_action( 'wp_enqueue_scripts', 'elementor_test_widgets_dependencies' );
-
-	function load_rtl_categorie_textdomain() {
-		load_plugin_textdomain( 'rtl-categories', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-	}
-	add_action( 'plugins_loaded', 'load_rtl_categorie_textdomain' );
 
 } else {
 	function send_notice_to_install_rtl_categories_plugin(): void

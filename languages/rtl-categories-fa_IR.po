@@ -1,0 +1,102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Rtl Categories\n"
+"POT-Creation-Date: 2024-04-08 15:10+0330\n"
+"PO-Revision-Date: 2024-04-08 15:21+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: rtl-categories.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: rtl-categories.php:36 widgets/elementor/rtl_categories.php:181
+msgid "Show More Categories"
+msgstr "مشاهده دسته بندی های بیشتر"
+
+#: rtl-categories.php:37 widgets/elementor/rtl_categories.php:181
+msgid "Show Less Categories"
+msgstr "مشاهده دسته بندی های کمتر"
+
+#: rtl-categories.php:58
+#, php-format
+msgid ""
+"%s requires <a href=\"%s\">Elementor</a> plugin to be installed and "
+"activated."
+msgstr ""
+"برای استفاده از افزونه %s باید افزونه <a href=\"%s\">المنتور</a> را نصب و "
+"فعال نمایید."
+
+#: rtl-categories.php:64
+#, php-format
+msgid "%s requires <a href=\"%s\">Elementor</a> plugin to be activated."
+msgstr ""
+"برای استفاده از افزونه %s باید افزونه <a href=\"%s\">المنتور</a> را فعال "
+"نمایید."
+
+#: widgets/elementor/rtl_categories.php:13
+msgid "Rtl woocommerce categories"
+msgstr "نمایش دسته بندی های ووکامرس ویژه راستچین"
+
+#: widgets/elementor/rtl_categories.php:52
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: widgets/elementor/rtl_categories.php:61
+msgid "Categories Count"
+msgstr "تعداد دسته بندی"
+
+#: widgets/elementor/rtl_categories.php:72
+msgid "Close Mode First Time"
+msgstr "موقع لود صفحه موارد بیشتر مخفی شود"
+
+#: widgets/elementor/rtl_categories.php:74
+msgid "Yes"
+msgstr "بلی"
+
+#: widgets/elementor/rtl_categories.php:75
+msgid "No"
+msgstr "خیر"
+
+#: widgets/elementor/rtl_categories.php:86
+msgid "Style"
+msgstr "استایل"
+
+#: widgets/elementor/rtl_categories.php:94
+msgid "Max Height In Close Mode"
+msgstr "بیشترین ارتفاع در حالت بسته"
+
+#: widgets/elementor/rtl_categories.php:106
+msgid "Max Height In Open Mode"
+msgstr "بیشترین ارتفاع در حالت گسترده"
+
+#. Plugin Name of the plugin/theme
+msgid "Rtl Categories"
+msgstr "نمایش دسته بندی ویژه راستچین"
+
+#. Plugin URI of the plugin/theme
+msgid "PLUGIN SITE HERE"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "PLUGIN DESCRIPTION HERE"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "YOUR NAME HERE"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "YOUR SITE HERE"
+msgstr ""
