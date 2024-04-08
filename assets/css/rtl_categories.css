@@ -1,0 +1,87 @@
+.rtl-categories-wrapper{
+	text-align: center;
+}
+.rtl-categories-wrapper a.rtl-toggle-categories:hover,.rtl-categories-wrapper a.rtl-toggle-categories:focus{
+	outline: none;
+}
+.rtl-categories-wrapper a.rtl-toggle-categories{
+	padding: 20px;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.rtl-categories{
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 16px;
+	transition: max-height .5s ease-out;
+	overflow: hidden;
+}
+.rtl-categories a{
+	text-decoration: none!important;
+}
+.rtl-categories.rtl-main-categories{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 16px;
+}
+.rtl-categories .rtl-category-box{
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	box-shadow: 0 0.2rem 0.7rem 0 rgba(0,0,0,.02);
+	border: 0.1rem solid hsla(0,0%,64%,.25);
+}
+.rtl-categories.rtl-main-categories .rtl-category-box{
+	background: #daddb5;
+	padding: 0 10px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.rtl-categories .rtl-category-box .rtl-category-image{
+	 width: 120px;
+	 height: auto;
+	 object-fit: contain;
+ }
+.rtl-categories.rtl-main-categories .rtl-category-box .rtl-category-image{
+	width: 180px;
+	height: auto;
+	object-fit: contain;
+}
+.rtl-categories .rtl-category-box .rtl-category-title{
+	font-weight:600;
+	font-size: 12px;
+	margin: 10px 8px;
+}
+.rtl-categories.rtl-main-categories .rtl-category-box .rtl-category-title{
+	font-weight: bold;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 962px) {
+	.rtl-categories.rtl-main-categories .rtl-category-box .rtl-category-title{
+		font-size: 14px;
+	}
+	.rtl-categories.rtl-main-categories .rtl-category-box .rtl-category-image {
+		width: 136px;
+	}
+	.rtl-categories{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.rtl-categories .rtl-category-box .rtl-category-title{
+		font-size: 10px;
+	}
+	.rtl-categories .rtl-category-box .rtl-category-image{
+		width: 80px;
+	}
+	.rtl-categories{
+		grid-template-columns: 1fr 1fr;
+	}
+}
